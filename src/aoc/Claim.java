@@ -6,13 +6,22 @@ public class Claim {
     int inchFromTop;
     int width;
     int height;
+    int id;
 
-
-    public Claim(int inchFromLeft, int inchFromTop, int width, int height) {
+    public Claim(int id, int inchFromLeft, int inchFromTop, int width, int height) {
+        this.id = id;
         this.inchFromLeft = inchFromLeft;
         this.inchFromTop = inchFromTop;
         this.width = width;
         this.height = height;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getInchFromLeft() {
@@ -54,6 +63,7 @@ public class Claim {
                 ", inchFromTop=" + inchFromTop +
                 ", width=" + width +
                 ", height=" + height +
+                ", id=" + id +
                 '}';
     }
 }
